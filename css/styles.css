@@ -1,0 +1,66 @@
+:root {
+  --primary: #0E1122;
+  --secondary: #E05128;
+  --light: #FFFFFF;
+}
+
+body,
+html {
+    background: var(--primary);
+    color: var(--light);
+    box-sizing: border-box;
+
+    font-family: Avenir, system-ui, sans-serif;
+    font-weight: normal;
+
+    background: var(--primary) url('../img/bg.jpg') no-repeat center -210px;
+    background-size: 1024px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main {
+
+    .main__intro {
+        max-width: 360px;
+    }
+
+    .main__features {
+
+        .main__features--feature {
+            display: flex;
+        }
+    }
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1050px;
+    padding: 30px;
+    grid-gap: 70px;
+}
+
+.footer {
+
+}
