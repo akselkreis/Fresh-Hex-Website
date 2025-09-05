@@ -2,6 +2,7 @@
   --primary: #0E1122;
   --secondary: #E05128;
   --light: #FFFFFF;
+  --spacing: 30px;
 }
 
 body,
@@ -9,14 +10,21 @@ html {
     background: var(--primary);
     color: var(--light);
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 
     font-family: Avenir, system-ui, sans-serif;
     font-weight: normal;
     font-size: 17px;
 
-    background: var(--primary) url('../img/bg.jpg') no-repeat center -210px;
-    background-size: 1024px;
+    background: var(--primary) url('../img/bg.jpg') no-repeat;
+    background-position: center -105px;
+    background-size: 512px;
 
+    @media screen and (min-width: 600px) {
+        background-size: 1024px;
+        background-position: center -210px;
+    }
 }
 
 h1 {
@@ -29,8 +37,41 @@ h2 {
 
 h3, h4, h5, h6 {
     font-weight: bold;
-    font-size: 32px;
-    margin: 1rem auto;
+    font-size: 28px;
+    margin: .5rem auto;
+}
+
+p {
+    margin: .5rem 0 1rem;
+}
+
+a {
+    color: var(--light);
+
+    &.button {
+        display: inline-block;
+        background: var(--light);
+        color: var(--primary);
+        padding: .6rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.15s ease;
+        border: 1px solid var(--light);
+
+        &:hover {
+            background: transparent;
+            color: var(--light);
+            
+
+        }
+    }
+}
+
+.headline {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 2rem;
+    
 }
 
 .container {
@@ -39,7 +80,11 @@ h3, h4, h5, h6 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 150px 20px;
+    padding: 75px 30px;
+
+    @media screen and (min-width: 600px) {
+        padding: 150px 30px 30px;
+    }
 }
 
 .header {
@@ -49,19 +94,33 @@ h3, h4, h5, h6 {
 }
 
 .icon {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+
+    @media screen and (min-width: 600px) {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .logo {
     width: 100%;
-    max-width: 410px;
+    max-width: 205px;
     height: auto;
+    margin: 1rem 0 1rem;
 
-    
+    @media screen and (min-width: 600px) {
+        max-width: 410px;
+        margin: 1rem 0 1rem;
+        width: 100%;
+        max-width: 410px;
+        }
 
 
+    img {
+        display: block;
+    }
 
     span {
         text-indent: 9999px;
@@ -72,7 +131,7 @@ h3, h4, h5, h6 {
 }
 
 .main {
-    max-width: 550px;
+    max-width: 600px;
 
     .main__intro {
         
@@ -105,7 +164,11 @@ h3, h4, h5, h6 {
 }
 
 .columns {
-
+    display: grid;
+    
+    &.two {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
 }
 
@@ -120,4 +183,24 @@ img {
 
 .left-align {
     text-align: left;
+}
+
+.feature-image {
+    display: inline-block;
+    transform: translateY(4px);
+    animation: shadow 5s infinite ease-in-out;
+
+    
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 20px 10px rgba(255,255,255,.05);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(255,255,255,.3);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(255,255,255,.05);
+    }
 }
