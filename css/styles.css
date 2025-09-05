@@ -135,7 +135,7 @@ a {
     .main__intro {
         max-width: 600px;
         margin: 2rem auto;
-        
+        text-align: center;
     }
 
     .main__features {
@@ -156,9 +156,6 @@ a {
 
 @media screen and (min-width: 600px) {
 
-    .main__intro {
-        text-align: center;
-    }
 
     .main__features {
         display: grid;
