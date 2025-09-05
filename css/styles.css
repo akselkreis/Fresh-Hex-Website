@@ -55,7 +55,7 @@ a {
         padding: .6rem 1rem;
         border-radius: 8px;
         text-decoration: none;
-        transition: all 0.15s ease;
+        transition: background 0.15s ease;
         border: 1px solid var(--light);
 
         &:hover {
