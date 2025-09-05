@@ -1,6 +1,6 @@
 :root {
   --primary: #0E1122;
-  --secondary: #E05128;
+  --secondary: #FA0F24;
   --light: #FFFFFF;
   --spacing: 30px;
 }
@@ -50,18 +50,18 @@ a {
 
     &.button {
         display: inline-block;
-        background: var(--light);
-        color: var(--primary);
+        background: var(--secondary);
+        color: var(--light);
         padding: .6rem 1rem;
         border-radius: 8px;
         text-decoration: none;
         transition: background 0.15s ease;
-        border: 1px solid var(--light);
+        border: 1px solid var(--secondary);
 
         &:hover {
             background: transparent;
             color: var(--light);
-            
+            border-color: var(--light);
 
         }
     }
@@ -131,26 +131,32 @@ a {
 }
 
 .main {
-    max-width: 600px;
-
+    
     .main__intro {
+        max-width: 600px;
+        margin: 2rem auto;
         
     }
 
     .main__features {
-       
+        margin: 30px auto;
+        max-width: 850px;
 
+  
+    }
 
-        .main__features--feature {
-            display: flex;
-            
-        }
+    .main__features--feature {
+        display: flex;
+        background: rgba(255,255,255,.05);
+        padding: .5rem 1rem 0;
+        border-radius: 16px;
+        margin-bottom: 1rem;
     }
 }
 
 @media screen and (min-width: 600px) {
 
-    .main {
+    .main__intro {
         text-align: center;
     }
 
@@ -189,8 +195,6 @@ img {
     display: inline-block;
     transform: translateY(4px);
     animation: shadow 5s infinite ease-in-out;
-
-    
 }
 
 @keyframes shadow {
