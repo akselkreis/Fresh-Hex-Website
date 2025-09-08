@@ -194,6 +194,11 @@ img {
     animation: shadow 5s infinite ease-in-out;
 }
 
+.download {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+}
+
 @keyframes shadow {
     0% {
         box-shadow: 0 0 20px 10px rgba(255,255,255,.05);
@@ -205,3 +210,4 @@ img {
         box-shadow: 0 0 20px 10px rgba(255,255,255,.05);
     }
 }
+
